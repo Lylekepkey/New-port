@@ -1,59 +1,220 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router" target="_blank" rel="noopener">router</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-vuex" target="_blank" rel="noopener">vuex</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+  <div class="container">
+    <!-- Left cont -->
+    <div class="fixed-temp">
+
+        <!-- Top nav -->
+        <div class="top-fixed-text">
+          <div class="name">
+            <h1>Lyle</h1>
+          </div>
+          <div class="next-text">
+            <p>Front-end <br> Web Developer</p>
+          </div>
+        </div>
+
+      <img class="image" src="https://i.postimg.cc/zvLRNh8n/C12-C2-Lyle-Kepky-1.jpg" />
+
+
+      <div class="email">
+        <a href="#footer" >lylekepkey@gmail.com</a>
+      </div>
+      <div class="location">
+        Cape Town, South Africa
+      </div>
+      <div class="location">
+        <a href="/src/assets/CV Of Lyle Kepkey.pdf" download="PDF">Download CV</a>
+      </div>
+    </div>
+
+    <div class="lil-description">
+      <div class="text2">  
+        <p>Hello There! <br>
+        I'm Lyle an aspiring Front-end developer. <br>
+        Right now I am in a love hate relationship with
+        vue.js. Why you may ask? It's because vue isn't
+        something I see myself using in the future  and I mean that 
+        in everyway😐
+        </p>
+      </div>
+      <div class="exp">
+        <p>
+          <a href="#">Experience</a>
+        </p>
+      </div>
+      <div class="proj">
+        <div class="proj-inner">
+          <p>
+            <a href="#">Projects completed and
+            in the process of being completed</a>
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'HelloWorld',
-  props: {
-    msg: String
-  }
+};
+
+function downloadFile() {
+  window.open()
 }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+a{
+  text-decoration: none;
+  color: #b47ab4;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+.container {
+  display: flex;
+  justify-content: space-between;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+
+/* top text */
+.top-fixed-text {
+  display: flex;
+  justify-content: center;
+  width:550px;
+  /* background-color:blue ; */
 }
-a {
-  color: #42b983;
+
+/* Name */
+.name {
+  margin-right: 150px;
+  padding: 0 60px;
+  color: #000000;
+  font: 400 30px "Inter", sans-serif;
 }
+
+/* Image */
+.image {
+  border-radius: 68px;
+  width: 267px;
+  height: 400px;
+}
+.fixed-temp {
+  box-sizing: border-box;
+  padding: 10px;
+  background: #d9d9d9;
+  border-radius: 68px;
+  width: 605px;
+  height: 800px;
+  margin-left: 50px;
+}
+
+
+/* Text-next to name */
+.next-text {
+  padding: 10px;
+  /* background-color: white; */
+  color: #000000;
+  text-align: center;
+  font: 400 20px "Inter", sans-serif;
+}
+
+.email {
+  padding-top: 50px;
+  color: #000000;
+  text-align: center;
+  font: 400 30px "Inter", sans-serif;
+}
+
+.location {
+  padding-top: 50px;
+  color: #000000;
+  text-align: center;
+  font: 400 30px "Inter", sans-serif;
+}
+
+
+/* right */
+.lil-description {
+  background: #d9d9d9;
+  border-radius: 68px;
+  width: 605px;
+  height: 600px;
+  margin-right: 50px;
+}
+
+.text2{
+  padding:50px;
+  color: #000000;
+  text-align: left;
+  font: 400 30px "Inter", sans-serif;
+}
+
+.exp {
+  font: 400 30px "Inter", sans-serif;
+}
+.proj {
+  padding-top: 20px;
+  margin: 0px 0px 0px 130px;
+  text-align: center;
+  font: 400 30px "Inter", sans-serif;
+  width: 320px;
+  /* background-color: black; */
+}
+
+
+@media (min-width: 315px) and (max-width: 605px) {
+  .container {
+    display:grid;
+    gap: 1rem;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "fixed-temp"
+    "lil-description"
+    ;
+  }
+  .lil-description{
+    margin-left:50px;
+  }
+}
+
+@media (min-width:605px) and (max-width: 700px) {
+  .container{
+    display: grid;
+    gap: 1rem;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "fixed-temp"
+    "lil-description"
+    ;
+    justify-content: center;
+    max-width: 120vh;
+  }
+
+  .fixed-temp{
+    margin: 0;
+  }
+
+  .lil-description{
+    margin: 0;
+  }
+}
+
+@media (min-width:700px ) and (max-width: 1310px) {
+  .container{
+    display: grid;
+    gap:1rem;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "fixed-temp"
+    "lil-description"
+    ;
+    justify-content: center;
+    margin-left: 150px;
+    max-width: 150vh;
+  }
+  .lil-description {
+    margin-left: 50px;
+  }
+}
+
 </style>
